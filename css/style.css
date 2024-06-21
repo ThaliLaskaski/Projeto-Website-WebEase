@@ -100,6 +100,19 @@ nav ul a:hover::after{
     image-resolution: auto;
 }
 /*end classes do site*/
+/* menu mobile */
+nav .menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+    display: none;
+}
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+/*end menu mobile*/
 
 /* banner */
 .banner{
@@ -163,6 +176,7 @@ nav ul a:hover::after{
 .cards{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .depoimentos .card-item{
     background-color:#421f5444;
@@ -190,7 +204,7 @@ nav ul a:hover::after{
 .depoimentos .cards .card-item .empresa-user{
     font-weight: 900;
     font-size: 15px;
-    margin-top: -7%;
+    margin-top: -4%;
     margin-bottom: 15px;
     transition: 0.3s;
 }
@@ -291,5 +305,285 @@ nav ul a:hover::after{
     color: #fff;
     margin-top: 10px;
 }
+/* end footers */
+/* Página sobre */
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-text{
+    width: 50%;
+    padding-right: 40px;
+}
+.sobre .sobre-text p,
+.sobre .sobre-text ul
+{
+    margin: 18px 0;
+    color: #000000a6;
+}
+.sobre .sobre-img{
+    width: 50%;
+}
+.sobre .sobre-img img{
+    width: 100%;
+}
+/* end Página sobre */
+
+/* Página serviço */
+.servicos h3{
+    text-align: center;
+}
+.servicos .container > p{
+    text-align: center;
+}
+.servicos .rows-cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.servicos .rows-card-item{
+    background-color: #cbc2d0;
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px; 
+    transition: 0.3s;
+}
+.servicos .rows-card-item:hover{
+    background-color: #421f54;
+}
+.servicos .rows-card-item:hover p{
+    color: #fff;
+}
+.servicos .rows-card-item img{
+    background-color: #421f54;
+    border-radius: 14px;
+    width: 70px;
+    padding: 9px;
+}
+.servicos .rows-card-item p.nome-servico{
+    margin: 5px 0;
+    transition: 0.3s;
+}
+.servicos .rows-card-item p.descricao-servico{
+    transition: 0.3s;
+}
+/* end Página serviço*/
+
+/* dados */
+.dados{
+    background-color: #cbc2d0;
+}
+.dados .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.dados .dados-item{
+    text-align: center;
+    margin: 15px;
+    color: #0000009c;
+}
+.dados .dados-item img{
+    background-color: #421f54;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80px;
+}
+.dados .dados-item p{
+    font-size: 18px;
+}
+.dados .dados-item p strong{
+    font-size: 28px;
+}
+/* end dados */
+
+/* contato */
+.contato .mapa{
+    margin-top: 10%;
+}
+.contato .contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contato-info .contato-dados{
+    width: 50%;
+    padding: 30px;
+    background-color: #421f54;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contato-info .contato-dados div{
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px; 
+}
+.contato-info .contato-dados div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: #fff;
+}
+.contato-info .contato-dados p{
+    font-size: 17px;
+    color: #fff;
+}
+.contato-info .contato-form{
+    width: 50%;
+}
+.contato-info .contato-form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+}
+.contato-info .contato-form input:focus,
+.contato-info .contato-form textarea:focus{
+    border-color: var(--rosa);
+    
+}
+.contato-info .contato-form textarea{
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+.contato-info .contato-form button{
+    border: none;
+}
 
 
+/* end contato */
+
+/* Responsivo */
+@media(max-width: 830px){
+    /* menu mobile */
+    nav .menu-icon{
+        display: block;
+    }
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1f0022;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 1.0s;
+    }
+    .ul.open{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+
+    /* Página home responsivo */
+    .faca-mais .faca-mais-text,
+    .seguro .seguro-text{
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+        text-align: center;
+    }
+    .faca-mais .container,
+    .seguro .container{
+        flex-direction: column;
+    }
+    .faca-mais .faca-mais-text h3,
+    .seguro .seguro-text h3{
+        font-size: 48px;
+    }
+    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-img,
+    .seguro .seguro-text,
+    .seguro .seguro-img{
+        width: 100%;
+    }
+
+    /* banner responsivo */
+    .banner .banner-text{
+        padding: 0;
+        margin: 80px;
+    }
+    .banner .banner-text h1{
+        font-size: 80px;
+    }
+    .banner .banner-text p{
+        font-size: 20px;
+    }
+
+    /* depoimentos responsivo */
+    .depoimentos .card-item{
+        width: 100%;
+    }
+    .depoimentos .cards .card-item .empresa-user{
+        margin-top: -4%;
+    }
+
+    /* Pagina sobre responsivo */
+    .sobre .container{
+        flex-direction: column-reverse;
+    }
+    .sobre .sobre-img,
+    .sobre .sobre-text{
+        width: 100%;
+    }
+    .sobre .sobre-text{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .sobre .sobre-text li{
+        margin-left: 5%;
+        text-align: left;
+    }
+
+    /* Pagina contato responsivo */
+    .contato .contato-info{
+        flex-direction: column-reverse;
+    }
+    .contato .contato-dados,
+    .contato .contato-form{
+        width: 100%;
+    }
+    .contato-info .contato-form{
+        margin-bottom: 50px;
+    }
+    .contato .contato-form .btn{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media(max-width: 500px){
+    .banner .banner-text h1{
+        font-size: 50px;
+    }
+    .faca-mais .faca-mais-text h3{
+        font-size: 40px;
+    }
+}
